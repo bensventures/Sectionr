@@ -1,0 +1,8 @@
+
+<a href="" ng-click="getChildren( family.section_id )">{{family.name}}</a>
+<ul>
+    <li ng-repeat="child in family.children">
+        <div ng-cat-tree family="child"></div>
+    </li>
+</ul>
+

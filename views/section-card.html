@@ -1,0 +1,7 @@
+<div class="col-lg-{{col}} instance-card">
+	<select class="form-control" ng-model="instance" ng-options="option.value as option.name for option in options">
+		<option value="">Select</option>
+	</select>
+
+	<div ng-cat-tree family="children"></div>
+</div>

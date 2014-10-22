@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html class="no-js" ng-app="SectionrApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+	<!-- build:css(.tmp) styles/main.css -->
+	<link rel="stylesheet" href="styles/bootstrap.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<!-- endbuild -->
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="scripts/libs/angular/angular.js"></script>
+	<script src="scripts/app.js"></script>
+	<script src="scripts/directives/catTree.js"></script>
+	<script src="scripts/controllers/sections.js"></script>
+
+</head>
+<body ng-controller="SectionCards">
+
+<div class="jumbotron">
+	<h1>Section(e)r <button class="btn col-lt-2" ng-click="addCard()">+</button></h1>
+</div>
+<div class="container">
+	<div class="row">
+		<ng-include src="'views/section-card.html'" ng-repeat="card in cards"></ng-include>
+	</div>
+</div>
+</body>
+</html>
